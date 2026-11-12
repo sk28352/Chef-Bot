@@ -1,0 +1,22 @@
+# Ingredient dataset: downloaded automatically by the app on first run
+processed_ingredients_with_id.csv
+
+# Recipes saved from the app
+recipe.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Secrets and local config
+.env
+.streamlit/secrets.toml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,40 @@
+# ChefBot - Python dependencies
+#
+# Recommended setup (Conda + pip):
+#   conda create -n chefbot python=3.9 spacy pandas numpy -c conda-forge -y
+#   conda activate chefbot
+#
+#   # PyTorch: pick ONE
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu     # CPU only
+#   pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121   # NVIDIA GPU (CUDA 12.1)
+#
+#   pip install -r requirements.txt
+#
+# The spaCy model (en_core_web_lg) downloads automatically on first run.
+
+# LLM inference
+transformers==4.57.6
+accelerate>=1.10.0
+
+# NLP: word vectors and lemmatization
+spacy>=3.8.0,<3.9.0
+
+# Data processing
+numpy>=2.0.0,<3.0.0
+pandas>=2.3.0,<3.0.0
+
+# Approximate nearest neighbor search (needs a C++ compiler on Windows,
+# or install a prebuilt version with: conda install -c conda-forge python-annoy)
+annoy>=1.17.0,<1.18.0
+
+# Web app
+streamlit>=1.50.0,<2.0.0
+
+# Downloads the ingredient dataset on first run
+gdown>=5.2.0,<6.0.0
+
+# Pinned to avoid version conflicts
+sympy==1.13.1  # required by PyTorch 2.5.1
+huggingface-hub>=0.34.0,<1.0.0
+tokenizers>=0.22.0,<=0.23.0
+safetensors>=0.4.3
